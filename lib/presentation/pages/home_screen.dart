@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:patient_screen/domain/usecases/get_doctors.dart';
+import 'package:patient_screen/presentation/pages/doctors_list.dart';
+import 'package:patient_screen/presentation/blocs/doctor_bloc.dart';
 import '../../core/constants/text_styles.dart';
 import '../widgets/custom_button.dart';
 import 'login_page.dart'; 
 import 'registration_screen.dart'; 
+import 'package:patient_screen/presentation/pages/doctors_list.dart'; // Ensure to import HomePage
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -89,10 +94,19 @@ class LoginForm extends StatelessWidget {
           SizedBox(height: 50),
           TextButton(
             onPressed: () {
-              
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => BlocProvider(
+                    create: (context) => DoctorBloc(context.read<GetDoctors>())
+                      ..add(GetDoctorList()),
+                    child: HomePage(),
+                  ),
+                ),
+              );
             },
             child: Text(
-              "Proceed as a Guest",
+              "Proceed as a Doctor", //click on this if you want to see json implementation - list of doctors
               style: TextStyles.underlineText,
             ),
           ),
