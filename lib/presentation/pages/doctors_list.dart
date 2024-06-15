@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_screen/domain/usecases/get_doctors.dart';
-import 'package:patient_screen/presentation/blocs/doctor_bloc.dart';
+import 'package:patient_screen/presentation/blocs/doctor/doctor_bloc.dart';
 import 'package:patient_screen/presentation/widgets/doctor_card.dart';
 
 class HomePage extends StatelessWidget {
