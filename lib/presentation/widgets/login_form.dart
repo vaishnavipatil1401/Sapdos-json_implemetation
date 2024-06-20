@@ -76,9 +76,7 @@ class LoginForm extends StatelessWidget {
               Row(
                 children: [
                   Checkbox(value: false, onChanged: (value) {}),
-                  Text(
-                    'Remember me',
-                  ),
+                  Text('Remember me'),
                   Spacer(),
                   TextButton(
                     onPressed: () {},
@@ -134,9 +132,11 @@ class LoginForm extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegistrationScreen()),
-                );
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => RegistrationScreen(),
+                        ),
+                      );
                     },
                     child: Text(
                       'Sign-up',

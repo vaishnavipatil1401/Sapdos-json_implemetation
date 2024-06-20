@@ -34,20 +34,20 @@ class DoctorInfoWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                   child: Image.network(
                     doctor.assetImage,
-                    width: 300,
+                    width: 150, // Adjust the width as needed
                     height: 200,
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(width: 150),
-                Expanded(
+                SizedBox(width: 16), // Adjust the spacing as needed
+                Expanded( // Use Expanded here
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         doctor.name,
                         style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 24, // Adjust the font size as needed
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -59,18 +59,20 @@ class DoctorInfoWidget extends StatelessWidget {
                           Text(
                             doctor.speciality,
                             style: TextStyle(
-                                fontSize: 20, color: Colors.grey[700]),
+                                fontSize: 16, // Adjust the font size as needed
+                                color: Colors.grey[700]),
                           ),
                           SizedBox(width: 8),
                           Icon(Icons.star, color: Colors.orange, size: 20),
                           Text(
                             '${doctor.rating}',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 16), // Adjust the font size as needed
                           ),
                           Text(
                             ' (${doctor.reviews})',
                             style: TextStyle(
-                                fontSize: 20, color: Colors.grey[600]),
+                                fontSize: 16, // Adjust the font size as needed
+                                color: Colors.grey[600]),
                           ),
                         ],
                       ),
@@ -82,14 +84,14 @@ class DoctorInfoWidget extends StatelessWidget {
                           Text(
                             doctor.qualification,
                             style: TextStyle(
-                                fontSize: 20, color: Colors.grey[700]),
+                                fontSize: 16, // Adjust the font size as needed
+                                color: Colors.grey[700]),
                           ),
                         ],
                       ),
                       SizedBox(height: 8),
                       Container(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 4, horizontal: 18),
+                        padding: EdgeInsets.symmetric(vertical: 4, horizontal: 18),
                         decoration: BoxDecoration(
                           color: Colors.blue[100],
                           borderRadius: BorderRadius.circular(8),
@@ -101,7 +103,7 @@ class DoctorInfoWidget extends StatelessWidget {
                             Text(
                               "${doctor.experience} Years",
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 16, // Adjust the font size as needed
                                 color: Colors.blue[800],
                               ),
                             ),
@@ -112,7 +114,7 @@ class DoctorInfoWidget extends StatelessWidget {
                       Text(
                         'Description',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18, // Adjust the font size as needed
                           fontWeight: FontWeight.bold,
                           color: Colors.blue[800],
                         ),
@@ -129,8 +131,7 @@ class DoctorInfoWidget extends StatelessWidget {
             ),
             SizedBox(height: 16),
             AvailableSlotsWidget(
-              slots: doctor
-                  .availableSlots, 
+              slots: doctor.availableSlots,
             ),
           ],
         ),

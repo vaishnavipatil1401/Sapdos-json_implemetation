@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_screen/presentation/blocs/login/login_bloc.dart';
-//import 'package:patient_screen/presentation/pages/home_screen.dart';
 import 'package:patient_screen/presentation/widgets/login_form.dart';
 
 class LoginPage extends StatelessWidget {
@@ -11,7 +10,6 @@ class LoginPage extends StatelessWidget {
       body: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 600) {
-            
             return Row(
               children: [
                 Expanded(
@@ -28,15 +26,14 @@ class LoginPage extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(32.0),
                     child: BlocProvider(
-                      create: (_) => LoginBloc(), 
-                      child: LoginForm(), 
+                      create: (_) => LoginBloc(),
+                      child: LoginForm(),
                     ),
                   ),
                 ),
               ],
             );
           } else {
-            
             return SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -50,8 +47,8 @@ class LoginPage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(32.0),
                     child: BlocProvider(
-                      create: (_) => LoginBloc(), 
-                      child: LoginForm(), 
+                      create: (_) => LoginBloc(),
+                      child: LoginForm(),
                     ),
                   ),
                 ],

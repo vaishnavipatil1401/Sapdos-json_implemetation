@@ -53,7 +53,7 @@ class DoctorDashboard extends StatelessWidget {
                                 Spacer(),
                                 CircleAvatar(
                                   radius: 60,
-                                  backgroundImage: AssetImage('assets/images/doctor.png'), 
+                                  backgroundImage: AssetImage('assets/images/doctor.png'),
                                 ),
                               ],
                             ),
